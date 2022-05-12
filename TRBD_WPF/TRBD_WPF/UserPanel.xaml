@@ -1,0 +1,35 @@
+﻿<Window x:Name="UserPanel1" x:Class="TRBD_WPF.UserPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRBD_WPF"
+        mc:Ignorable="d"
+        Title="UserPanel" Height="613" Width="658" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,-10,0">
+        <Label Content="Панель управления" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Ваш логин:" HorizontalAlignment="Left" Margin="466,75,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ваше Ф.И.О:" HorizontalAlignment="Left" Margin="461,104,0,0" VerticalAlignment="Top"/>
+        <Button Content="Изменить данные" HorizontalAlignment="Left" Margin="471,137,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label x:Name="LabelLogin" Content="Label" HorizontalAlignment="Left" Margin="534,75,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LabelFIO" Content="Label" HorizontalAlignment="Left" Margin="534,104,0,0" VerticalAlignment="Top"/>
+        <Label Content="Выберете тест:" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top"/>
+
+        <ComboBox x:Name="cb" HorizontalAlignment="Center" Margin="0,184,0,0" VerticalAlignment="Top" Width="610" ItemsSource="{Binding}" DisplayMemberPath="TestName"/>
+
+        <Button Content="Пройти" HorizontalAlignment="Center" Margin="0,219,0,0" VerticalAlignment="Top" Width="68" Height="25" Click="Button_Click_1"/>
+        <Button Content="Обновить историю" HorizontalAlignment="Center" Margin="0,263,0,0" VerticalAlignment="Top" Height="25" Width="122"/>
+        <DataGrid x:Name="TestDG" AutoGenerateColumns="False" IsReadOnly="True" Margin="15,306,24,57">
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Header="Название теста" Binding="{Binding Test.TestName}" Width="120"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Результат" Binding="{Binding Rating}" Width="95"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Затраченное время" Binding="{Binding Time}" Width="142"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Количество баллов" Binding="{Binding Scores}" Width="150"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Дата" Binding="{Binding Data}" Width="80"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Сертификат" HorizontalAlignment="Center" Margin="0,559,0,0" VerticalAlignment="Top" Width="100" Height="23"/>
+
+    </Grid>
+</Window>

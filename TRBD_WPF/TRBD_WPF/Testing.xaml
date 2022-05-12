@@ -1,0 +1,28 @@
+﻿<Window x:Class="TRBD_WPF.Testing"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRBD_WPF"
+        mc:Ignorable="d"
+        Title="Testing" Height="434" Width="537" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="LabelTestName" Content="Название теста" HorizontalAlignment="Left" Margin="240,49,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ваше Ф.И.О:" HorizontalAlignment="Left" Margin="204,19,0,0" VerticalAlignment="Top"/>
+        <Label Content="Выберете нужный ответ
+               " HorizontalAlignment="Left" Margin="206,209,0,0" VerticalAlignment="Top" Width="149"/>
+        <RadioButton Content="1" HorizontalAlignment="Left" Margin="124,242,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="2" HorizontalAlignment="Left" Margin="220,242,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="3" HorizontalAlignment="Left" Margin="306,242,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="4" HorizontalAlignment="Left" Margin="388,242,0,0" VerticalAlignment="Top"/>
+        <Label Content="Времени на данный вопрос:" HorizontalAlignment="Left" Margin="79,269,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LabelFIO" Content="Label" HorizontalAlignment="Left" Margin="286,19,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxQuestion" HorizontalAlignment="Center" Margin="0,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="517" Height="127" IsReadOnlyCaretVisible="True"/>
+        <Label Content="Времени на весь тест:" HorizontalAlignment="Left" Margin="115,298,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="TimeQuestionLabel" Content="1" HorizontalAlignment="Left" Margin="271,269,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="TimeTestLabel" Content="" HorizontalAlignment="Left" Margin="271,298,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.563,0.599"/>
+        <Button x:Name="ButtonAnswer" Content="Ответить" HorizontalAlignment="Left" Margin="170,363,0,0" VerticalAlignment="Top" Width="108" Click="ButtonAnswer_Click"/>
+        <Button Content="Завершить тест" HorizontalAlignment="Left" Margin="286,363,0,0" VerticalAlignment="Top" Width="108"/>
+
+    </Grid>
+</Window>
